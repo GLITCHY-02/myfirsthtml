@@ -1,7 +1,11 @@
 let boton =  document.getElementById('boton');
 let inPut = document.getElementById('input');
 let label = document.getElementById('texto')
+let isPress = false
 boton.addEventListener('click', (e)=>{
   e.preventDefault();
-  label.innerHTML = label.innerHTML + " " + inPut.value
+  if(!isPress){
+    label.innerHTML = label.innerHTML + " " + inPut.value
+    isPress = true
+  }
 })
